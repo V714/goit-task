@@ -1,0 +1,65 @@
+@media screen and (max-width: 1267px)
+    html
+        font-size: 12px
+    body
+        grid-template: .5fr 0.3fr 0.8fr 0.1fr/1fr !important
+
+    header
+        width: 100%
+        height: 650px
+        padding: 20px 0px
+        .title-container
+            width: 80%
+            .title-container__title-big
+                font-size: 4rem
+                line-height: 5rem
+        nav
+            flex-direction: column
+            ul
+                display: none
+                flex-direction: column
+            #hamburger
+                display: block
+            #menu-mobile
+                display: flex
+                transition: all .4s ease-in-out
+                transform: translateY(-150%)
+                justify-items: center
+                gap: 0
+                li
+                    font-size: 1.5rem
+                    width: 100%
+                    padding: 20px 0
+                    font-weight: 600
+                    a
+                        padding: 20px 50px
+                    &::after
+                        all: unset
+                    &:hover
+                        background-color: $yellow
+                        color: $pink
+    .content
+        .content__header
+            width: 100%
+        .content__body--services
+            grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr
+            .content__body--service-item
+                width: 100%
+                justify-self: center
+        .content__body--team .team--container
+            margin-top: 30px
+            grid-template: 1fr 1fr 1fr / 1fr
+            gap: 15px
+            .person
+                .person__info
+                    margin-top: 5px
+                .person__image-container .person__image-container--image
+                    width: 300px
+                    height: 367.5px
+    footer
+        margin: 10px
+        width: 100%
+        flex-direction: column-reverse
+        margin: 0
+        text-align: center
+        gap: 50px

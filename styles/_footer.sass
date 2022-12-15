@@ -1,0 +1,47 @@
+
+footer
+    justify-self: center
+    margin: 50px 0
+    position: relative
+    display: flex
+    justify-content: space-between
+    width: 66%
+    .copyright
+        font-weight: 500
+        span
+            color: $pink
+    &::before
+        content: ''
+        top: -20px
+        position: absolute
+        opacity: .5
+        border-top: 1px solid $gray
+        width: 100%
+        height: 1px
+    #subscribe
+        height: 45px
+        display: flex
+        justify-content: center
+        input
+            width: 200px
+            font-style: italic
+            border: 1px solid $gray
+            padding: 12px 12px
+            border-top-left-radius: 3px
+            border-bottom-left-radius: 3px
+            border-right: none !important
+            opacity: .8
+            transition: all .15s ease-in-out
+            &:focus
+                outline: none
+                border: 1px solid #000
+                transition: all .15s ease-in-out
+        button
+            font-weight: 700
+            padding: 8px 35px
+            color: white
+            transition: all .15s ease-in-out
+            background-color: $green
+            &:hover
+                filter: saturate(2)
+                transition: all .15s ease-in-out

@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@-webkit-keyframes underline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes underline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.content {
+  justify-self: center;
+  text-align: center;
+  width: 63%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .content__header {
+  width: 500px;
+}
+.content .content__header .content__header--small {
+  font-size: 1.7rem;
+  font-family: "Architects Daughter";
+}
+.content .content__header .content__header--big {
+  font-size: 2rem;
+}
+.content .content__body--services {
+  margin-top: 50px;
+  display: grid;
+  gap: 40px;
+  grid-template: 1fr 1fr/1fr 1fr 1fr;
+  font-size: 1rem;
+}
+.content .content__body--services .content__body--service-item {
+  display: flex;
+  align-items: flex-start;
+}
+.content .content__body--services .content__body--service-item .content__body--service-item--text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  gap: 10px;
+  text-align: left;
+  color: #999;
+  font-weight: 500;
+}
+.content .content__body--services .content__body--service-item .content__body--service-item--text b {
+  color: #000;
+}
+.content .content__body--services .content__body--service-item img {
+  width: 35px;
+}
+.content .content__body--team .content_body--team--text {
+  color: #999;
+}
+.content .content__body--team .team--container {
+  margin-top: 100px;
+  display: grid;
+  gap: 20px;
+  grid-template: 1fr/1fr 1fr 1fr;
+}
+.content .content__body--team .team--container .person {
+  position: relative;
+}
+.content .content__body--team .team--container .person .person__image-container {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container--image {
+  position: relative;
+  height: 490px;
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover {
+  transition: all 0.2s ease-in-out;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover .person__image-container__team-hover--overlay {
+  position: absolute;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#f38181, #fce38a);
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover .person--buttons {
+  display: flex;
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover .person--buttons li {
+  transition: all 0.15s ease-in-out;
+  width: 60px;
+  height: 60px;
+  filter: saturate(1.5);
+  background: #fce38a;
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover .person--buttons li:hover {
+  transition: all 0.15s ease-in-out;
+  background: #f38181;
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover .person--buttons li:hover a img {
+  filter: brightness(0) invert(1);
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover .person--buttons li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.content .content__body--team .team--container .person .person__image-container .person__image-container__team-hover .person--buttons li a img {
+  width: 25px;
+  height: 25px;
+}
+.content .content__body--team .team--container .person .person__image-container:hover {
+  transform: translate(-10px, -10px);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 10px 10px 0 #95e1d3;
+}
+.content .content__body--team .team--container .person .person__image-container:hover .person__image-container__team-hover {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+.content .content__body--team .team--container .person .person__info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.content .content__body--team .team--container .person .person__info i {
+  color: #999;
+  font-size: 1rem;
+}
+
+footer {
+  justify-self: center;
+  margin: 50px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 66%;
+}
+footer .copyright {
+  font-weight: 500;
+}
+footer .copyright span {
+  color: #f38181;
+}
+footer::before {
+  content: "";
+  top: -20px;
+  position: absolute;
+  opacity: 0.5;
+  border-top: 1px solid #999;
+  width: 100%;
+  height: 1px;
+}
+footer #subscribe {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+}
+footer #subscribe input {
+  width: 200px;
+  font-style: italic;
+  border: 1px solid #999;
+  padding: 12px 12px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: none !important;
+  opacity: 0.8;
+  transition: all 0.15s ease-in-out;
+}
+footer #subscribe input:focus {
+  outline: none;
+  border: 1px solid #000;
+  transition: all 0.15s ease-in-out;
+}
+footer #subscribe button {
+  font-weight: 700;
+  padding: 8px 35px;
+  color: white;
+  transition: all 0.15s ease-in-out;
+  background-color: #95e1d3;
+}
+footer #subscribe button:hover {
+  filter: saturate(2);
+  transition: all 0.15s ease-in-out;
+}
+
+header {
+  justify-self: center;
+  margin-top: 10px;
+  width: 65%;
+  color: #fff;
+  height: 800px;
+  padding: 20px 300px;
+  background: url("./img/bg.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+header #header-overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  opacity: 0.9;
+  background: linear-gradient(#f38181, #fce38a);
+}
+header .title-container {
+  position: relative;
+  margin-top: 100px;
+  width: 600px;
+  text-align: center;
+}
+header .title-container .title-container__title-small {
+  font-family: "Architects Daughter";
+  font-size: 3rem;
+}
+header .title-container .title-container__title-big {
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 100px;
+}
+header .title-container #title-container__learn-more-button {
+  margin-top: 80px;
+  border: 3px solid #fff;
+  padding: 7px 30px;
+  transition: all 0.2s ease-in-out;
+}
+header .title-container #title-container__learn-more-button:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  color: #f38181;
+}
+header nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav #header__logo {
+  font-size: 2rem;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header nav ul li {
+  transition: color 0.15s ease-in-out;
+  position: relative;
+}
+header nav ul li a {
+  padding: 10px 10px;
+}
+header nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fce38a;
+  transform-origin: bottom;
+  transition: transform 0.15s ease-out;
+}
+header nav ul li:hover {
+  transition: all 0.15s ease-in-out;
+  color: #fce38a;
+}
+header nav ul li:hover img {
+  filter: unset;
+}
+header nav ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+header nav ul li img {
+  transition: all 0.15s ease-in-out;
+  width: 15px;
+  filter: grayscale(1) contrast(2);
+}
+header nav #hamburger {
+  display: none;
+  z-index: 98;
+  position: absolute;
+  top: 0;
+  right: 30px;
+}
+header nav #hamburger img {
+  width: 30px;
+}
+header nav #hamburger:focus ~ #menu-mobile {
+  transform: none !important;
+  transition: all 0.3s ease-in-out;
+}
+header nav #menu-mobile {
+  display: none;
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  background-color: #f38181;
+  z-index: 99;
+}
+
+@media screen and (max-width: 1267px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    grid-template: 0.5fr 0.3fr 0.8fr 0.1fr/1fr !important;
+  }
+  header {
+    width: 100%;
+    height: 650px;
+    padding: 20px 0px;
+  }
+  header .title-container {
+    width: 80%;
+  }
+  header .title-container .title-container__title-big {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  header nav {
+    flex-direction: column;
+  }
+  header nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  header nav #hamburger {
+    display: block;
+  }
+  header nav #menu-mobile {
+    display: flex;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-150%);
+    justify-items: center;
+    gap: 0;
+  }
+  header nav #menu-mobile li {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 20px 0;
+    font-weight: 600;
+  }
+  header nav #menu-mobile li a {
+    padding: 20px 50px;
+  }
+  header nav #menu-mobile li::after {
+    all: unset;
+  }
+  header nav #menu-mobile li:hover {
+    background-color: #fce38a;
+    color: #f38181;
+  }
+  .content .content__header {
+    width: 100%;
+  }
+  .content .content__body--services {
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr;
+  }
+  .content .content__body--services .content__body--service-item {
+    width: 100%;
+    justify-self: center;
+  }
+  .content .content__body--team .team--container {
+    margin-top: 30px;
+    grid-template: 1fr 1fr 1fr/1fr;
+    gap: 15px;
+  }
+  .content .content__body--team .team--container .person .person__info {
+    margin-top: 5px;
+  }
+  .content .content__body--team .team--container .person .person__image-container .person__image-container--image {
+    width: 300px;
+    height: 367.5px;
+  }
+  footer {
+    margin: 10px;
+    width: 100%;
+    flex-direction: column-reverse;
+    margin: 0;
+    text-align: center;
+    gap: 50px;
+  }
+}
+ul, li {
+  list-style: none;
+  -webkit-padding-start: unset;
+          padding-inline-start: unset;
+}
+
+a, button {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  display: grid;
+  grid-template: 1fr 0.5fr 0.8fr 0.2fr/1fr;
+  gap: 50px;
+  font-family: "Poppins";
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 70px;
+  border: 2px solid #f38181;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,115 @@
+
+.content
+    justify-self: center
+    text-align: center
+    width: 63%
+    display: flex
+    flex-direction: column
+    align-items: center
+    .content__header
+        width: 500px
+        .content__header--small
+            font-size: 1.7rem
+            font-family: 'Architects Daughter'
+        .content__header--big
+            font-size: 2rem
+    .content__body--services
+        margin-top: 50px
+        display: grid
+        gap: 40px
+        grid-template: 1fr 1fr / 1fr 1fr 1fr
+        font-size: 1rem
+
+        .content__body--service-item
+            display: flex
+            align-items: flex-start
+            .content__body--service-item--text
+                display: flex
+                flex-direction: column
+                margin-left: 30px
+                gap: 10px
+                text-align: left
+                color: $gray
+                font-weight: 500
+                b
+                    color: #000
+            img
+                width: 35px
+
+    .content__body--team
+        .content_body--team--text
+            color: $gray
+        .team--container
+            margin-top: 100px
+            display: grid
+            gap: 20px
+            grid-template: 1fr / 1fr 1fr 1fr
+            .person
+                position: relative
+                .person__image-container
+                    position: relative
+                    transition: all .2s ease-in-out
+                    margin: auto
+                    width: max-content
+                    height: max-content
+                    .person__image-container--image
+                        position: relative
+                        height: 490px
+                        width: 400px
+                        object-fit: cover
+                    .person__image-container__team-hover
+                        transition: all .2s ease-in-out
+                        top: 0
+                        left: 0
+                        position: absolute
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        height: 100%
+                        width: 100%
+                        opacity: 0
+                        .person__image-container__team-hover--overlay
+                            position: absolute
+                            opacity: .9
+                            height: 100%
+                            width: 100%
+                            background: linear-gradient($pink,$yellow)
+                        .person--buttons
+                            display: flex
+                            li
+                                transition: all .15s ease-in-out
+                                width: 60px
+                                height: 60px
+                                filter: saturate(1.5)
+                                background: $yellow
+                                &:hover
+                                    transition: all .15s ease-in-out
+                                    background: $pink
+                                    a img
+                                        filter: brightness(0) invert(1)
+                                a
+                                    position: relative
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    width: 100%
+                                    height: 100%
+                                    img
+                                        width: 25px
+                                        height: 25px
+
+                    &:hover
+                        transform: translate(-10px, -10px)
+                        transition: all .2s ease-in-out
+                        box-shadow: 10px 10px 0 $green
+                        .person__image-container__team-hover
+                            opacity: 1
+                            transition: all .2s ease-in-out
+
+                .person__info
+                    margin-top: 20px
+                    display: flex
+                    flex-direction: column
+                    i
+                        color: $gray
+                        font-size: 1rem

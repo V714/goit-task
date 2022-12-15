@@ -1,0 +1,103 @@
+
+header
+    justify-self: center
+    margin-top: 10px
+    width: 65%
+    color: #fff
+    height: 800px
+    padding: 20px 300px
+    background: url("./img/bg.png")
+    background-size: cover
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    #header-overlay
+        position: absolute
+        width: 100%
+        left: 0
+        top: 0
+        height: 100%
+        opacity: .9
+        background: linear-gradient($pink, $yellow)
+    .title-container
+        position: relative
+        margin-top: 100px
+        width: 600px
+        text-align: center
+        .title-container__title-small
+            font-family: 'Architects Daughter'
+            font-size: 3rem
+        .title-container__title-big
+            margin-top: 20px
+            font-weight: 800
+            font-size: 6rem
+            line-height: 100px
+        #title-container__learn-more-button
+            margin-top: 80px
+            border: 3px solid #fff
+            padding: 7px 30px
+            transition: all .2s ease-in-out
+            &:hover
+                transition: all .2s ease-in-out
+                background-color: #fff
+                color: $pink
+    nav
+        position: relative
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        #header__logo
+            font-size: 2rem
+
+        ul
+            display: flex
+            align-items: center
+            gap: 30px
+            li
+                transition: color 0.15s ease-in-out
+                position: relative
+                a
+                    padding: 10px 10px
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    transform: scaleX(0)
+                    height: 2px
+                    bottom: -5px
+                    left: 0
+                    background-color: $yellow
+                    transform-origin: bottom
+                    transition: transform 0.15s ease-out
+                &:hover
+                    transition: all 0.15s ease-in-out
+                    color: $yellow
+                    img
+                        filter: unset
+                    &::after
+                        transform: scaleX(1)
+                        transform-origin: bottom
+                img
+                    transition: all 0.15s ease-in-out
+                    width: 15px
+                    filter: grayscale(1) contrast(2)
+        #hamburger
+            display: none
+            z-index: 98
+            position: absolute
+            top: 0
+            right: 30px
+            img
+                width: 30px
+            &:focus ~ #menu-mobile
+                transform: none !important
+                transition: all .3s ease-in-out
+        #menu-mobile
+            display: none
+            position: absolute
+            top: -30px
+            right: 0px
+            background-color: $pink
+            z-index: 99
